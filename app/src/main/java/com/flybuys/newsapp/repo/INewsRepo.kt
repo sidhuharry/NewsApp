@@ -9,5 +9,5 @@ import kotlinx.coroutines.flow.Flow
  * This can be used to plug in caches or room Db in case network response has failed
  */
 interface INewsRepo {
-    suspend fun getNewsItems(): Flow<GenericResponse<Any?>>
+    suspend fun getNewsItems(): Flow<GenericResponse>
 }

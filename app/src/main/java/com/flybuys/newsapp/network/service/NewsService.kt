@@ -1,5 +1,6 @@
 package com.flybuys.newsapp.network.service
 
+import android.util.Log
 import com.flybuys.newsapp.model.GenericResponse
 import com.flybuys.newsapp.network.api.NewsApi
 import com.flybuys.newsapp.network.util.Parser
@@ -7,12 +8,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NewsService
-@Inject constructor(
+class NewsService(
     private val newsApi: NewsApi,
     private val parser: Parser,
 ) : INewsService {
@@ -20,7 +19,7 @@ class NewsService
     override fun getNewsItems(): Flow<GenericResponse> {
         return flow {
             val result = kotlin.runCatching {
-                newsApi.getNewsItems(FEED_URL_ENCODED).execute()
+                newsApi.getNewsItems(FEED_URL).execute()
             }
             val networkResponse = parser.parseRetrofitResponse(result)
             emit(networkResponse)
@@ -28,7 +27,8 @@ class NewsService
     }
 
     companion object {
-        private const val FEED_URL_ENCODED =
-            "https%3A%2F%2Fwww.abc.net.au%2Fnews%2Ffeed%2F51120%2Frss.xml"
+        private const val FEED_URL =
+            "https://www.abc.net.au/news/feed/51120/rss.xml"
+        private const val TAG = "NewsService"
     }
 }

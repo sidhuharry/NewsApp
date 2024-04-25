@@ -5,6 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 
 interface INewsService {
-
     fun getNewsItems(): Flow<GenericResponse>
 }

@@ -26,7 +26,7 @@ class Parser @Inject constructor() {
                 }
             }
         } else {
-            Log.e(TAG, "Unable to parse response.", result.exceptionOrNull())
+            Log.e(TAG, "Call failed", result.exceptionOrNull())
         }
         return genericResponse
     }

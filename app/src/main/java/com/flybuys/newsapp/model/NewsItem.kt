@@ -2,7 +2,7 @@ package com.flybuys.newsapp.model
 
 data class NewsItem(
     val title: String,
-    val pubDate: String,
+    var pubDate: String,
     val link: String,
     val guid: String,
     val thumbnail: String,

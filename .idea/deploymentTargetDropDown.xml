@@ -8,6 +8,22 @@
       <entry key="MainActivity">
         <State />
       </entry>
+      <entry key="Preview">
+        <State>
+          <runningDeviceTargetSelectedWithDropDown>
+            <Target>
+              <type value="RUNNING_DEVICE_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="SERIAL_NUMBER" />
+                  <value value="ZD222CPDM7" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </runningDeviceTargetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-04-25T15:48:48.280286783Z" />
+        </State>
+      </entry>
       <entry key="app">
         <State />
       </entry>
