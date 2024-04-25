@@ -4,12 +4,12 @@ package com.flybuys.newsapp.model
 /**
  * Class to encapsulate network response from the repo layer to UI View model
  */
-sealed class NetworkResponse {
+sealed class Response {
     data class Success(
         val responseBody: Any? = null
-    ) : NetworkResponse()
+    ) : Response()
 
     data class Failure(
         val reason: String = ""
-    ) : NetworkResponse()
+    ) : Response()
 }

@@ -1,7 +1,7 @@
 package com.flybuys.newsapp.network.util
 
 import android.util.Log
-import com.flybuys.newsapp.model.NetworkResponse
+import com.flybuys.newsapp.model.Response
 import retrofit2.Response
 
 class Parser {
@@ -12,14 +12,14 @@ class Parser {
      * For success: NetworkResponse.Success
      * For failure: NetworkResponse.Failure
      */
-    fun <T> parseResponse(result: Result<Response<T>>): NetworkResponse {
-        var networkResp: NetworkResponse = NetworkResponse.Failure()
+    fun <T> parseResponse(result: Result<Response<T>>): com.flybuys.newsapp.model.Response {
+        var networkResp: com.flybuys.newsapp.model.Response = Response.Failure()
         if (result.isSuccess) {
             result.getOrNull()?.let {
                 networkResp = if (it.isSuccessful) {
-                    NetworkResponse.Success(it.body())
+                    Response.Success(it.body())
                 } else {
-                    NetworkResponse.Failure(it.message())
+                    Response.Failure(it.message())
                 }
             }
         } else {
