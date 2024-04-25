@@ -1,6 +1,6 @@
 package com.flybuys.newsapp.repo
 
-import com.flybuys.newsapp.model.Response
+import com.flybuys.newsapp.model.GenericResponse
 import kotlinx.coroutines.flow.Flow
 
 /**
@@ -9,5 +9,5 @@ import kotlinx.coroutines.flow.Flow
  * This can be used to plug in caches or room Db in case network response has failed
  */
 interface INewsRepo {
-    suspend fun getNewsItems(): Flow<Response>
+    suspend fun getNewsItems(): Flow<GenericResponse<Any?>>
 }

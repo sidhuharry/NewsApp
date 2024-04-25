@@ -1,4 +1,4 @@
-package com.flybuys.newsapp.screens.article
+package com.flybuys.newsapp.ui.screens.article
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
