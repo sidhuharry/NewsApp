@@ -3,7 +3,7 @@ package com.flybuys.newsapp.network.service
 import android.util.Log
 import com.flybuys.newsapp.model.GenericResponse
 import com.flybuys.newsapp.network.api.NewsApi
-import com.flybuys.newsapp.network.util.Parser
+import com.flybuys.newsapp.network.util.parseRetrofitResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -13,7 +13,6 @@ import javax.inject.Singleton
 @Singleton
 class NewsService(
     private val newsApi: NewsApi,
-    private val parser: Parser,
 ) : INewsService {
 
     override fun getNewsItems(): Flow<GenericResponse> {
@@ -21,7 +20,7 @@ class NewsService(
             val result = kotlin.runCatching {
                 newsApi.getNewsItems(FEED_URL).execute()
             }
-            val networkResponse = parser.parseRetrofitResponse(result)
+            val networkResponse = parseRetrofitResponse(result)
             emit(networkResponse)
         }.flowOn(Dispatchers.IO)
     }

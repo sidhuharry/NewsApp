@@ -3,7 +3,6 @@ package com.flybuys.newsapp.di
 import com.flybuys.newsapp.network.api.NewsApi
 import com.flybuys.newsapp.network.service.INewsService
 import com.flybuys.newsapp.network.service.NewsService
-import com.flybuys.newsapp.network.util.Parser
 import com.flybuys.newsapp.repo.INewsRepo
 import com.flybuys.newsapp.repo.NewsRepo
 import dagger.Module
@@ -28,8 +27,8 @@ class SingletonModule {
 
     @Provides
     @Singleton
-    fun providesNewsService(newsApi: NewsApi, parser: Parser): INewsService {
-        return NewsService(newsApi, parser)
+    fun providesNewsService(newsApi: NewsApi): INewsService {
+        return NewsService(newsApi)
     }
 
     @Provides

@@ -17,10 +17,12 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.CardColors
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -145,7 +147,7 @@ fun RegularNewsItem(modifier: Modifier, newsItem: NewsItem) {
     ElevatedCard(
         modifier = modifier
             .height(160.dp)
-            .wrapContentHeight(align = Alignment.CenterVertically)
+            .wrapContentHeight(align = Alignment.CenterVertically),
     ) {
         Row(
             modifier = modifier
@@ -230,9 +232,9 @@ fun TopNewsItem(modifier: Modifier, newsItem: NewsItem) {
 
             }
             Column(modifier = modifier) {
-                Divider(
+                HorizontalDivider(
                     thickness = 1.dp,
-                    color = Color.Gray,
+                    color = Color.Gray
                 )
                 Text(
                     text = newsItem.pubDate,
