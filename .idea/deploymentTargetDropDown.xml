@@ -27,6 +27,9 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="testTheUILayout()">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

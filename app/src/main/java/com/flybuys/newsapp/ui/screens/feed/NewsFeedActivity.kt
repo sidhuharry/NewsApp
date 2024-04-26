@@ -9,8 +9,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.flybuys.newsapp.ui.screens.feed.compose.AppBar
-import com.flybuys.newsapp.ui.screens.feed.compose.NewsFeedLayout
+import com.flybuys.newsapp.ui.screens.feed.components.AppBar
+import com.flybuys.newsapp.ui.screens.feed.components.NewsFeedLayout
 import com.flybuys.newsapp.ui.theme.NewsAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,7 +20,7 @@ class NewsFeedActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            NewsAppTheme(darkTheme = true) {
+            NewsAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
