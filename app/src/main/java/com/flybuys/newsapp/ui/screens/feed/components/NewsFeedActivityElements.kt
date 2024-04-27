@@ -186,7 +186,7 @@ fun RegularNewsItem(modifier: Modifier, newsItem: NewsItem) {
                     .fillMaxWidth()
                     .align(Alignment.CenterVertically)
                     .clip(RoundedCornerShape(5.dp)),
-                contentScale = ContentScale.FillHeight
+                contentScale = ContentScale.Crop
             )
         }
     }
@@ -250,7 +250,7 @@ fun TopNewsItem(modifier: Modifier, newsItem: NewsItem) {
 @Preview
 @Composable
 fun PreviewTheUiNews() {
-    TopNewsItem(
+    RegularNewsItem(
         modifier = Modifier, newsItem = NewsItem(
             "Paramount to pay 5% dividend to its employees so whateveer this is saying is it gonna work not sure but let me try anyway",
             "24 May 2024 04 AM",

@@ -24,8 +24,24 @@
           <timeTargetWasSelectedWithDropDown value="2024-04-25T15:48:48.280286783Z" />
         </State>
       </entry>
-      <entry key="app">
+      <entry key="PreviewTheUiNews">
         <State />
+      </entry>
+      <entry key="app">
+        <State>
+          <runningDeviceTargetSelectedWithDropDown>
+            <Target>
+              <type value="RUNNING_DEVICE_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="SERIAL_NUMBER" />
+                  <value value="adb-ZD222CPDM7-0YqkVa._adb-tls-connect._tcp" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </runningDeviceTargetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-04-27T10:09:32.401730869Z" />
+        </State>
       </entry>
       <entry key="testTheUILayout()">
         <State />
